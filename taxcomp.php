@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <?php
 
 function grossIncome($monthlyIncome){
@@ -64,9 +65,9 @@ function payableTax($taxableIncome){
 
 function getValue(){
 
-    $monthlyIncome = $_GET['monthlyIncome'];
-    $govtEmployed = $_GET['govtEmployed'];
-    $numberOfDependents = $_GET['numberOfDependents'];
+    $monthlyIncome = $_POST['monthlyIncome'];
+    $govtEmployed = $_POST['govtEmployed'];
+    $numberOfDependents = $_POST['numberOfDependents'];
 
     $totalIncome = grossIncome($monthlyIncome);
 
@@ -76,11 +77,13 @@ function getValue(){
 
     $tax = payableTax($taxableIncome);
     
-    echo "\nTotal Income = ".$totalIncome;
-    echo "\nTotal Deductions = ".$deductions;
-    echo "\nTaxable Income = ".$taxableIncome;
-    echo "\nPayable Tax = ".$tax;
-
+    print "<p> <br>Total Income = ".$totalIncome;
+    print "<br>Total Deductions = ".$deductions;
+    print "<br>Taxable Income = ".$taxableIncome;
+    print "<br>Payable Tax = ".$tax."</p>";
+    print "<br><a href='Tax Comp.html' style='text-decoration:none;color:#ff0099;'> Return Home</a>";
 }
+getValue();
+
 
 ?>

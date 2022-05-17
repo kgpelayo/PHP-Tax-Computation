@@ -1,28 +1,36 @@
 <!DOCTYPE HTML>  
 <html>
 <head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>  
-
+  <div class="container">
+    <br><br>
   <h1>Philippine Income Tax Computation</h1>
-
+  
   <p>An Income tax is the amount that income-earning Filipinos and business organizations have to pay to the government on a yearly basis. The income tax is the payors' pay is based on various factors such as total income earned, number of dependents, etc.</p>
   
-  <form action="taxcomp.php" method="get" name="Form1" id="Form1">
+  <form action="taxcomp.php" method="post" name="Form1" id="Form1">
+    <div class="form-group">
       <label><br>Monthly Income: </label>
       <input type ="number" id="monthlyIncome" name ="monthlyIncome"> <br>
+    </div>
 
+    <div class="form-group">
       <label><br>Number of Dependents: </label>
       <input type ="number" id="numberOfDependents" name ="numberOfDependents" placeholder="e.g. Old parents & Children below 21 yrs old"> <br>
+    </div>
 
+    <div class="form-group">
       <label><br>Government worker? <br></label>
       <input type="radio" id="govtEmployed" name="govtEmployed" value="Y"> Yes
       <input type="radio" id="govtEmploted" name="govtEmployed" value="N"> No <br> <br>
-
-      <input type="submit" name="submit_button" value="SUBMIT" onclick=getValue()>
-
+    </div>
+    <div class="form-group">
+      <input type="submit" name="submit_button" value="SUBMIT" onclick=getValue() class="btn btn-primary">
+    </div>
   </form>
-
+</div>
 
 
 </body>
