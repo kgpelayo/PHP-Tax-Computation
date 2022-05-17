@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>  
+<html>
+<head>
+</head>
+<body>  
+
+  <h1>Philippine Income Tax Computation</h1>
+
+  <p>An Income tax is the amount that income-earning Filipinos and business organizations have to pay to the government on a yearly basis. The income tax is the payors' pay is based on various factors such as total income earned, number of dependents, etc.</p>
+  
+  <form action="taxcomp.php" method="get" name="Form1" id="Form1">
+      <label><br>Monthly Income: </label>
+      <input type ="number" id="monthlyIncome" name ="monthlyIncome"> <br>
+
+      <label><br>Number of Dependents: </label>
+      <input type ="number" id="numberOfDependents" name ="numberOfDependents" placeholder="e.g. Old parents & Children below 21 yrs old"> <br>
+
+      <label><br>Government worker? <br></label>
+      <input type="radio" id="govtEmployed" name="govtEmployed" value="Y"> Yes
+      <input type="radio" id="govtEmploted" name="govtEmployed" value="N"> No <br> <br>
+
+      <input type="submit" name="submit_button" value="SUBMIT" onclick=getValue()>
+
+  </form>
+
+
+
+</body>
+</html>
